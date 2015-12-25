@@ -4,7 +4,7 @@
 
 import { Provider } from 'react-redux';
 import store from './redux/store';
-
+import { connect } from 'react-redux';
 import React, {
   AppRegistry,
   Platform,
@@ -45,9 +45,10 @@ class App extends React.Component {
   }
   renderScene(route, navigator) {
     const Component = route.component;
+    console.log(route.params)
 
     return (
-      <Component {...route.params} navigator={navigator} />
+      <Component {...route.params}  navigator={navigator} />
     );
   }
   render() {
@@ -63,5 +64,7 @@ class App extends React.Component {
     );
   }
 }
+
+
 
 AppRegistry.registerComponent('MyProject', () => App);
