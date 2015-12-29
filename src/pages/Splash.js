@@ -7,8 +7,10 @@ import React, {
   Text,
   TouchableOpacity,
 } from 'react-native';
-
+import { createAction, handleActions } from 'redux-actions';
 import styles from './Splash.styles';
+const INITIAL_OVER = 'app/session/initial_over';
+const initialOver = createAction(INITIAL_OVER);
 
 export default class Splash extends React.Component {
   render() {
@@ -17,7 +19,7 @@ export default class Splash extends React.Component {
         <TouchableOpacity onPress={this.props.onIncrement}>
         <Text style={styles.title}>
           press here
-         <Text> {this.props.text.text}</Text>
+         <Text> {this.props.text}</Text>
         </Text>
        </TouchableOpacity>
       </View>
@@ -27,27 +29,22 @@ export default class Splash extends React.Component {
 }
 
 function mapStateToProps(state) {
+      console.log(state);
   return {
+
     text: state.text
   };
 }
 
-function increment(){
-  return {
-    type:'SET_VALUE',
-    text: 'test redux'
-  }
-
-}
 // Which action creators does it want to receive by props?
 function mapDispatchToProps(dispatch) {
-
+ 
   return {
-    onIncrement: () => dispatch(increment())
+    onIncrement: () => dispatch(initialOver('35'))
   };
 }
 
 export default connect(   // Line 20
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(Splash);
