@@ -26,29 +26,27 @@ import {setphoneLoad,setvalidateLoad} from '../redux/modules/loginredux'
 export default class Login extends React.Component{
   constructor(props){
         super(props);
-        this.state = {
-              phoneloaded: false,
-             validateloaded:false,
-        };
-    }
+ }
  _onChangeText(text)
  {
+  const {dispatch} = this.props;
   if(text.length===11)
-    this.setState({phoneloaded:true})
-  else if (this.state.phoneloaded===true)
-    this.setState({phoneloaded:false})
+    dispatch(setphoneLoad(true))
+  else if (this.props.phoneloaded===true)
+    dispatch(setphoneLoad(false))
 
  }
   _onChangeValidateText(text)
  {
+  const {dispatch} = this.props;
   if(text.length===6)
-    this.setState({validateloaded:true})
-  else if (this.state.validateloaded===true)
-    this.setState({validateloaded:false})
+    dispatch(setvalidateLoad(true))
+  else if (this.props.validateloaded===true)
+        dispatch(setvalidateLoad(false))
 
  }
  _onPress(){
-  if(this.state.phoneloaded&&this.state.validateloaded)
+  if(this.props.phoneloaded&&this.props.validateloaded)
   {
     this.refs.phonetext.blur()
     this.refs.validatetext.blur()
@@ -61,8 +59,7 @@ export default class Login extends React.Component{
  }
 
   render(){
-    var isPressed= this.state.phoneloaded && this.state.validateloaded ? 0:1;
-    let test = this.props.phoneloaded === true ? <Text>loaded </Text> : <Text>no load</Text>;
+    let isPressed= this.props.phoneloaded && this.props.validateloaded ? 0:1;
     return (
       <View>
         <View style={styles.header}>
@@ -95,11 +92,11 @@ export default class Login extends React.Component{
           maxLength={6}
         >
         </TextInput>
-        <TouchableOpacity style={[styles.getvalidate,this.state.phoneloaded&&styles.yzm]}>
-        <Text style={[styles.bottomText,{fontSize:16,color:this.state.phoneloaded?'white':'#C7C7CD'}]}>获取验证码</Text>
+        <TouchableOpacity style={[styles.getvalidate,this.props.phoneloaded&&styles.yzm]}>
+        <Text style={[styles.bottomText,{fontSize:16,color:this.props.phoneloaded?'white':'#C7C7CD'}]}>获取验证码</Text>
         </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.button} onPress={this._onPress.bind(this)} activeOpacity={isPressed}>
+        <TouchableOpacity style={styles.button} onPress={()=>this._onPress()} activeOpacity={isPressed}>
         <Text style={[styles.bottomText,{fontSize:16,color:'#C0C0C0'}]} >确定</Text> 
         </TouchableOpacity >
         <Text style={styles.bottomText}>
@@ -107,7 +104,6 @@ export default class Login extends React.Component{
         <Text style={{color:'#FF8600'}}>   鱼多多合作商户协议 </Text>
         </Text>
         <TouchableOpacity onPress={this.props.onIncrement}>
-        {test}
         </TouchableOpacity>
       </View>
 
@@ -132,6 +128,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(   // Line 20
-  mapStateToProps,
-  mapDispatchToProps,
+  mapStateToProps
 )(Login);
