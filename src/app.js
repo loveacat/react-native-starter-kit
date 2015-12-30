@@ -13,6 +13,7 @@ import React, {
 } from 'react-native';
 
 import Splash from './pages/Splash';
+import Login from './pages/Login'
 
 class App extends React.Component {
   componentWillMount() {
@@ -35,7 +36,7 @@ class App extends React.Component {
     return false;
   };
   initialRoute = {
-    component: Splash,
+    component: Login,
   };
   configureScene() {
     if (Platform.OS === 'ios') {

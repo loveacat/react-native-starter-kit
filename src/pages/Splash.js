@@ -32,7 +32,7 @@ function mapStateToProps(state) {
       console.log(state);
   return {
 
-    text: state.text
+    text: state.session.text
   };
 }
 

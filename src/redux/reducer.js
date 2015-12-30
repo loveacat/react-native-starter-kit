@@ -4,10 +4,10 @@
 import { combineReducers } from 'redux';
 
 import sessionReducer from './modules/session';
-
+import loginReducer from './modules/loginredux';
 
 
 
 export default combineReducers({
-  text: sessionReducer,
+  login:loginReducer,
 });
