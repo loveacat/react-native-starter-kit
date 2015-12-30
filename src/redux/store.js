@@ -20,4 +20,5 @@ const finalCreateStore = applyMiddleware(
 )(_createStore);
 
 const store = finalCreateStore(reducer);
+console.log(store.state)
 export default store;
