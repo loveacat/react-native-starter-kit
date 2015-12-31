@@ -6,7 +6,7 @@
 
 
 
-//var Tabbar= require('./Tabbar');
+
 import React,{
   AppRegistry,
   Image,
@@ -19,6 +19,7 @@ import React,{
   TouchableOpacity,
   TextInput,
 } from 'react-native';
+import Tabbar from './Tabbar'
 import { connect } from 'react-redux';
 import styles from './Login.styles';
 import {setphoneLoad,setvalidateLoad} from '../redux/modules/loginredux'
@@ -103,8 +104,7 @@ export default class Login extends React.Component{
         点击 [确定] 即表示同意
         <Text style={{color:'#FF8600'}}>   鱼多多合作商户协议 </Text>
         </Text>
-        <TouchableOpacity onPress={this.props.onIncrement}>
-        </TouchableOpacity>
+
       </View>
 
     )
@@ -116,6 +116,7 @@ function mapStateToProps(state) {
   return {
 
     phoneloaded: state.login.phoneloaded,
+    validateloaded:state.login.validateloaded
   };
 }
 

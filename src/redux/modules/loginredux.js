@@ -9,7 +9,7 @@ export const SET_PHONED_LOADED ='app/pages/Login/set_phoneloaded'
 export const SET_VALIDATE_LOADED ='app/pages/Login/set_validateloaded'
 
 // Initial state
-const initialState = {phoneloaded:false};
+const initialState = {phoneloaded:false,validateloaded:false};
 
 // reducer
 const reducer = handleActions({
@@ -20,12 +20,12 @@ const reducer = handleActions({
   [SET_PHONED_LOADED]:(state,action)=>{
   	 let curstate = state.phoneloaded
   	console.log('action payload'+action.payload)
-  	return Object.assign({},...state,{phoneloaded:action.payload});
+  	return Object.assign({},state,{phoneloaded:action.payload});
   },
   [SET_VALIDATE_LOADED]:(state,action)=>{
   	 let curstate = state.phoneloaded
   	console.log('action payload'+action.payload)
-  	return Object.assign({},...state,{phoneloaded:action.payload});
+  	return Object.assign({},state,{validateloaded:action.payload});
   },
 }, initialState);
 
