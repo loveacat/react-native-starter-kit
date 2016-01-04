@@ -14,6 +14,8 @@ import React, {
 
 import Splash from './pages/Splash';
 import Login from './pages/Login'
+import Coupon from './pages/Coupon'
+import CouponList from './pages/CouponList'
 
 class App extends React.Component {
   componentWillMount() {
@@ -36,7 +38,7 @@ class App extends React.Component {
     return false;
   };
   initialRoute = {
-    component: Login,
+    component: CouponList,
   };
   configureScene() {
     if (Platform.OS === 'ios') {
