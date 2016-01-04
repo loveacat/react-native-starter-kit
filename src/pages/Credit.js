@@ -4,10 +4,6 @@
  */
 'use strict';
 
-var React = require('react-native');
-var PutFish = require('./PutFish')
-var Charge=require('./Charge')
-var ChargeConfig=require('./ChargeConfig')
 var CreditSummary= require('./CreditSummary')
 var CreditDetail =require('./CreditDetail')
 var {

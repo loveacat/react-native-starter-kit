@@ -16,7 +16,8 @@ import Splash from './pages/Splash';
 import Login from './pages/Login'
 import Coupon from './pages/Coupon'
 import CouponList from './pages/CouponList'
-
+import CreditDetail from './pages/CreditDetail'
+import CreditSummary from './pages/CreditSummary'
 class App extends React.Component {
   componentWillMount() {
     if (Platform.OS === 'android') {
@@ -38,7 +39,7 @@ class App extends React.Component {
     return false;
   };
   initialRoute = {
-    component: CouponList,
+    component: CreditSummary,
   };
   configureScene() {
     if (Platform.OS === 'ios') {

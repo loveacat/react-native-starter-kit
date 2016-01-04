@@ -49,8 +49,9 @@ export default class Login extends React.Component{
  _onPress(){
   if(this.props.phoneloaded&&this.props.validateloaded)
   {
-    this.refs.phonetext.blur()
-    this.refs.validatetext.blur()
+ //   this.refs.phonetext.blur()
+//    this.refs.validatetext.blur()
+
    this.props.navigator.push({
     title:'Detail',
     component:Tabbar,
