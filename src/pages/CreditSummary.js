@@ -14,7 +14,7 @@ import React,{
 } from 'react-native';
 
 import styles from './CreditSummary.styles'
-
+import Footer from '../compents/Footer'
 export default class CreditSummary extends React.Component{
    constructor(props){
         super(props);
@@ -76,10 +76,7 @@ export default class CreditSummary extends React.Component{
           style={styles.listview}
           renderRow={this._renderRow} />
 
-          <View style={styles.bottom}>
-            <View />
-            <Text style={styles.foottext}>累计积分:526670</Text>
-          </View>
+        <Footer lefttext='' righttext='累计积分：526670' />
         </View>
     );
   }
