@@ -18,6 +18,7 @@ import Coupon from './pages/Coupon'
 import CouponList from './pages/CouponList'
 import CreditDetail from './pages/CreditDetail'
 import CreditSummary from './pages/CreditSummary'
+import Marketing from './pages/Marketing'
 class App extends React.Component {
   componentWillMount() {
     if (Platform.OS === 'android') {
@@ -39,7 +40,7 @@ class App extends React.Component {
     return false;
   };
   initialRoute = {
-    component: CreditSummary,
+    component: Marketing,
   };
   configureScene() {
     if (Platform.OS === 'ios') {

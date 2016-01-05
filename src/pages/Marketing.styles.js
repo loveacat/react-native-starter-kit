@@ -1,0 +1,192 @@
+/**
+ * Created by tdzl2_000 on 2015-12-22.
+ */
+import {
+  StyleSheet,
+} from 'react-native';
+
+import globalStyles from '../styles';
+
+const localStyles = StyleSheet.create({
+ normal:{
+    flex:1,
+  },
+  redflag:{
+  width:3,
+  height:15,
+  backgroundColor:'red',
+  margin:5
+  },
+     header:{
+    height:55,
+    alignItems:'flex-end',
+    justifyContent:"space-between",
+    flexDirection:'row',
+    padding:10,
+  },
+      headerText: {
+    fontSize:18,
+
+    fontWeight:'bold',
+
+  },
+  couponview:{
+    backgroundColor:'#F0F0F0',
+    padding:10,
+    paddingLeft:40,
+    paddingRight:40,
+    height:105,
+  },
+  addbutton:{
+    borderRadius:4,
+    alignItems:'center',
+    justifyContent:'center',
+    height:85,
+ 
+  },
+   dept:{
+    fontSize:12,
+    color:'#A7A7A7'
+   },
+    coupon:{
+    flexDirection:'row',
+    height:105,
+    backgroundColor:'#FFFFFF',
+    borderRadius:4,
+    paddingLeft:20,
+    paddingRight:20,
+    paddingTop:10,
+    paddingBottom:6,
+    justifyContent:'space-between',
+  },
+  row:{
+    height:30,
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'center',
+    borderBottomWidth:1,
+    borderColor:'#F0F0F0',
+    marginLeft:20,
+    paddingRight:20,
+  },
+    rowheader:{
+    flexDirection:'row',
+    alignItems:'center',
+    paddingLeft:5,
+    height:40,
+    borderBottomWidth:1,
+    borderColor:'#F0F0F0',
+  },
+  button:{
+    height:20,
+    backgroundColor:'red',
+    width:50,
+    borderRadius:4,
+    alignItems:'center',
+    justifyContent:'center'
+  },
+  buttontext:{
+    color:'white',
+    fontSize:12,
+  },
+  listview:{
+    paddingLeft:10,
+  },
+  bottom:{
+    flexDirection:'row',
+    alignItems:'center',
+    height:25,
+    paddingLeft:15,
+    paddingRight:15,
+    justifyContent:'space-between'
+  },
+  left:{
+    flex:3,
+    justifyContent:'space-between',
+  },
+  middle:{
+    flex:2,
+    paddingLeft:15
+  },
+  right:{
+    flex:1,
+    alignItems:'center'
+  },
+  lefttext:{
+    flex:2,
+  },
+  middletext:{
+    flex:1,
+    textAlign:'right',
+    color:'#A3A3A3'
+  },
+  righttext:{
+    flex:1,
+    textAlign:'right',
+    color:'#A3A3A3'
+  },
+  normaltext:{
+    color:'#A3A3A3',
+    fontSize:12,
+  },
+  decription:{
+    padding:10,
+    borderBottomWidth:1,
+    borderColor:'#F0F0F0',
+  },
+  number:{
+    flex:1,
+    textAlign:'center',
+    fontSize:16
+  },
+  cname:{
+    flexDirection:'row',
+    borderBottomWidth:1,
+    borderColor:'#F1F1F1',
+    height:85,
+    alignItems:'center',
+    paddingLeft:10,
+  },
+
+  coltext:{
+    fontSize:11,
+    color:'#56AC71',
+    marginBottom:1,
+  },
+
+  foottext:{
+    color:'#C5C5C5',
+    fontSize:12,
+  },
+  seperator:{
+    height:15,
+    backgroundColor:'#F0F0F0',
+  },
+  container: {
+    paddingLeft:15,
+    flexDirection:'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  contenttext:{
+    color:'red'
+
+  },
+  headerimg:{
+    width:20,
+    height:20,
+  },
+  img:{
+    width:65,
+    height:65,
+    borderRadius:4,
+  },
+  rightimg:{
+    width:20,
+    height:20,
+  },
+});
+export default {
+  ...globalStyles,
+  ...localStyles,
+};
