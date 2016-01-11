@@ -14,7 +14,7 @@ import React,{
 } from 'react-native';
 
 import styles from './CreditSummary.styles'
-import Footer from '../compents/Footer'
+import Footer from '../components/Footer'
 export default class CreditSummary extends React.Component{
    constructor(props){
         super(props);

@@ -17,7 +17,7 @@ import React,{
 
 import Coupon from './Coupon'
 import styles from './CouponList.styles'
-import Footer from '../compents/Footer'
+import Footer from '../components/Footer'
 export default class CouponList extends React.Component{
   constructor(props){
         super(props);

@@ -14,7 +14,7 @@ import  React, {
 } from 'react-native';
 
 
-import  Row from '../compents/Row'
+import  Row from '../components/Row'
 import DashedBorder from 'react-native-dashed-border'
 import styles from './Marketing.styles'
 export default class Marketing extends React.Component{

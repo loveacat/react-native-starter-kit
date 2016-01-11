@@ -5,7 +5,7 @@
 'use strict';
 
 import styles from './Coupon.styles'
-import Row from '../compents/Row'
+import Row from '../components/Row'
 import React,{
   Text,
   View,

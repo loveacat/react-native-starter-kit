@@ -3,7 +3,7 @@
  * https://github.com/facebook/react-native
  */
 'use strict';
-
+import Header from '../components/Header'
 import CreditSummary from './CreditSummary'
 import  CreditDetail from './CreditDetail'
 import React,{
@@ -18,8 +18,9 @@ import React,{
 } from 'react-native';
 
 import ScrollableTabView from 'react-native-scrollable-tab-view'
-import ScrollTabbar from '../compents/ScrollTabbar'
+import ScrollTabbar from '../components/ScrollTabbar'
 import styles from './Credit.styles'
+
 export default class Credit extends React.Component{
 
   onPress(){
@@ -30,6 +31,8 @@ export default class Credit extends React.Component{
   render() {
     return (
     <View style={styles.normal}>
+      <Header leftimg={require('../images/left.png')} middletext='积分' />
+      {/*
   		<View style={styles.header} >
         <TouchableOpacity onPress={()=>this.onPress()}>
     		<Image style={styles.img} source={require('../images/left.png')}/>
@@ -37,6 +40,7 @@ export default class Credit extends React.Component{
     		<Text style={styles.headerText}>积分</Text>
   		  <View />
 		  </View>
+    */}
       <ScrollableTabView style={styles.normal}  renderTabBar={() => <ScrollTabbar />} >
     		<ScrollView tabLabel="统计" style={styles.tabView} contentContainerStyle={{flex:1}} >
     		    <CreditSummary  />

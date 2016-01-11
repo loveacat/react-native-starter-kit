@@ -21,6 +21,10 @@ import CreditSummary from './pages/CreditSummary'
 import Marketing from './pages/Marketing'
 import Credit from './pages/Credit'
 import IncomeDetail from './pages/IncomeDetail'
+import Charge from './pages/Charge'
+import ChargeConfig from './pages/ChargeConfig'
+import ChargeConfigWeight from './pages/ChargeConfigWeight'
+
 class App extends React.Component {
   componentWillMount() {
     if (Platform.OS === 'android') {
@@ -42,7 +46,7 @@ class App extends React.Component {
     return false;
   };
   initialRoute = {
-    component: IncomeDetail,
+    component: ChargeConfigWeight,
   };
   configureScene() {
     if (Platform.OS === 'ios') {

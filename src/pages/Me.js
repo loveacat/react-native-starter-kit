@@ -5,7 +5,7 @@
 'use strict';
 
 
-import Row from '../compents/Row'
+import Row from '../components/Row'
 import React, {
   AppRegistry,
   StyleSheet,
